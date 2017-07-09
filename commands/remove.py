@@ -1,5 +1,5 @@
 def main(args, curs, conn):
-    if not args[0] or not int(args[0]):
+    if not args[0] or not int(args[0]): # TODO try catch on int coercion
         # asserting type and presence
         raise ValueError("Primary key required as integer!")
     row = curs.execute("SELECT * FROM todos WHERE id=?", [args[0]]).fetchall()[0]
