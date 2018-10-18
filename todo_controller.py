@@ -41,10 +41,10 @@ def execute_command(args):
 
 def main(args):
     all_commands = get_all_commands()
-    if args[0] not in all_commands:
-        command_not_found()
-    elif args[0] is 'help':
+    if args[0] is 'help':
         print_help()
+    elif args[0] not in all_commands:
+        command_not_found()
     else:
         execute_command(args)
 
