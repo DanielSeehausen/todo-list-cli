@@ -4,9 +4,13 @@ make sure to `source set_aliases.sh` in your `.bashrc/.bash_profile`
 
 #### Uses the following commands:
 
-list <category[optional]>
-add <content> <category[optional]>
-rem <row_id>
-print_db
+`list <category[optional]>`
+
+`add <content> <category[optional]>`
+
+`rem <row_id>`
+
+`print_db`
+
 
 This should just work out of box! Make sure you have Python3
