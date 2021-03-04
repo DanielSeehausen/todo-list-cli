@@ -39,10 +39,10 @@ def get_all_commands():
     return [x.split('/')[-1][:-3:] for x in glob.iglob('./commands/*.py')]
 
 def main(args):
-    if args[0] is 'help':
+    if args[0] == 'help':
         print_help()
     elif args[0] not in get_all_commands():
-        print("Command not recognized.. Try:")
+        print("Command not recognized. Try:")
         print_help()
     else:
         execute_command(args)
