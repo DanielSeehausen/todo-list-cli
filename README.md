@@ -1,6 +1,6 @@
 # todo_list_cli
 simulates a todo list to be called from the cli
-make sure to `source set_aliases.sh` in your `.bashrc/.bash_profile`
+make sure to `source set_aliases.sh` in your shell startup
 
 #### Uses the following commands:
 
