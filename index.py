@@ -29,7 +29,7 @@ def execute_command(args):
     curs = conn.cursor()
     create_table_if_absent(curs)
 
-    # this acts as a function dispatch, passing all args to the resolved function
+    # function dispatch: passes all args to the resolved function
     command = importlib.import_module(args[0]).main
     com_args = None if len(args) < 1 else args[1:]
     command(com_args, curs, conn)
@@ -39,7 +39,7 @@ def get_all_commands():
     return [x.split('/')[-1][:-3:] for x in glob.iglob('./commands/*.py')]
 
 def main(args):
-    if args[0] == 'help':
+    if args[0] == 'help' or args[0] == '-h':
         print_help()
     elif args[0] not in get_all_commands():
         print("Command not recognized. Try:")
